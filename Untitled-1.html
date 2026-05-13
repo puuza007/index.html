@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แนะนำสถานที่ท่องเที่ยวและแหล่งโรงงานอุตสาหกรรม</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    .flag{
+    width:45px;
+
+    vertical-align:middle;
+
+    margin-left:10px;
+}
+body{
+    font-family:'Noto Sans Thai',sans-serif;
+    margin:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.8)),
+    url('images/china-bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+}
+header{
+    text-align:center;
+    padding:90px 20px;
+
+    background:rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:2px solid rgba(255,215,0,0.3);
+
+    box-shadow:0 5px 30px rgba(255,0,0,0.3);
+}
+header h1{
+    font-family:'Noto Serif Thai',serif;
+    font-size:64px;
+    color:#ffd700;
+    letter-spacing:4px;
+
+    text-shadow:
+    0 0 10px rgba(255,215,0,0.5),
+    0 0 20px rgba(255,0,0,0.4);
+
+    border:2px solid rgba(255,215,0,0.35);
+
+    display:inline-block;
+
+    padding:15px 40px;
+
+    border-radius:18px;
+
+    background:rgba(120,0,0,0.25);
+}
+header h2{
+    font-size:38px;
+    color:#f5d27a;
+    margin-top:15px;
+    letter-spacing:2px;
+
+    text-shadow:
+    0 0 8px rgba(255,215,0,0.3);
+}
+h2{
+    color:#ffd700;
+
+    font-size:32px;
+
+    position:relative;
+
+    display:inline-block;
+
+    margin-bottom:20px;
+}
+
+h2::after{
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:100%;
+    height:3px;
+
+    background:
+    linear-gradient(to right,
+    transparent,
+    #ffd700,
+    transparent);
+}
+
+header p{
+    font-size:22px;
+
+    color:#f5d27a;
+}
+.container {padding:20px; max-width:900px; margin:auto;}
+.card{
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:35px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 32px rgba(255,0,0,0.25);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 10px 40px rgba(255,215,0,0.35);
+}
+.card img{
+    width:100%;
+    height:300px;
+
+    object-fit:cover;
+
+    display:block;
+}
+.card-content {padding:15px;}
+button{
+    margin:10px;
+
+    padding:14px 30px;
+
+    background:
+    linear-gradient(to bottom,#b30000,#7a0000);
+
+    color:#ffd700;
+
+    border:2px solid #d4af37;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:0.35s;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.4),
+    inset 0 0 10px rgba(255,215,0,0.25);
+
+    text-shadow:
+    0 0 5px rgba(255,215,0,0.5);
+}
+
+button:hover{
+    transform:translateY(-4px);
+
+    background:
+    linear-gradient(to bottom,#d40000,#990000);
+
+    box-shadow:
+    0 8px 25px rgba(255,215,0,0.4);
+
+    color:#fff3b0;
+}
+.detail {display:none; margin-top:10px; line-height:1.7;}
+.detail img {width:100%; border-radius:10px; margin:10px 0;}
+hr {margin:25px 0;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>
+แนะนำสถานที่ท่องเที่ยว
+<img src="images/china-flag.png" class="flag">
+</h1>
+
+<h2>และแหล่งโรงงานอุตสาหกรรม</h2>
+</header>
+
+<div class="container">
+
+<!-- ================= กวางโจว ================= -->
+<div class="card">
+<img src="images/guangzhou.jpg">
+
+<div class="card-content">
+<h2>กวางโจว</h2>
+
+<button onclick="toggle('gz_travel')">สถานที่ท่องเที่ยว</button>
+<button onclick="toggle('gz_factory')">แหล่งโรงงานอุตสาหกรรม</button>
+
+<!-- ===== ท่องเที่ยว กวางโจว ===== -->
+<div id="gz_travel" class="detail">
+
+<p><b>1. Canton Tower</b></p>
+<img src="images/gz1.jpg">
+<img src="images/gz1-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: สิ่งก่อสร้างที่เป็นแลนด์มาร์คสำคัญระดับโลก สูง 600 เมตร</p>
+<p>• ไฮไลต์สำคัญ: จุดชมวิว 360°, Bubble Tram, Sky Drop</p>
+<p>• พิกัด: ริมแม่น้ำเพิร์ล</p>
+<p>• การเดินทาง: MRT สาย 3</p>
+<p>• ติดต่อ: +86 20 8933 8222</p>
+<hr>
+
+<p><b>2. Shamian Island</b></p>
+<img src="images/gz2.jpg">
+<img src="images/gz2-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: เกาะประวัติศาสตร์สไตล์ยุโรป อดีตเขตเช่าต่างชาติ</p>
+<p>• ไฮไลต์สำคัญ: อาคารนีโอคลาสสิก บรรยากาศสงบ ร่มรื่น</p>
+<p>• พิกัด: เขต Liwan ใกล้แม่น้ำเพิร์ล</p>
+<p>• การเดินทาง: MRT สาย 1/6 สถานี Huangsha</p>
+<p>• ติดต่อ: +86 20 8121 5149</p>
+<hr>
+
+<p><b>3. Chen Clan Hall</b></p>
+<img src="images/gz3.jpg">
+<img src="images/gz3-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: วิหารบรรพบุรุษเก่าแก่ ปัจจุบันเป็นพิพิธภัณฑ์ศิลปะกวางตุ้ง </p>
+<p>•ไฮไลต์สำคัญ: งานแกะสลักไม้ หิน ปูนปั้น สถาปัตยกรรมหลิงหนาน </p>
+<p>•พิกัด: เขต Liwan </p>
+<p>•การเดินทาง: MRT สาย 1/8 สถานี Chen Clan Academy </p>
+<p>•ติดต่อ: +86 20 8181 4552 </p>
+<hr>
+
+<p><b>4. Beijing Road</b></p>
+<img src="images/gz4.jpg">
+<img src="images/gz4-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ถนนคนเดินเก่าแก่กว่า 2,000 ปี</p>
+<p>•ไฮไลต์สำคัญ: ถนนโบราณใต้พื้นกระจก วัด Dafo ยามค่ำคืน</p>
+<p>•พิกัด: เขต Yuexiu</p>
+<p>•การเดินทาง: MRT สาย 6 สถานี Beijing Lu</p>
+<p>•ติดต่อ: +86 20 8330 7014</p>
+<hr>
+
+<p><b>5. Baiyun Mountain</b></p>
+<img src="images/gz5.jpg">
+<img src="images/gz5-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ภูเขาชื่อดังของกวางโจว มีมากกว่า 30 ยอด</p>
+<p>•ไฮไลต์สำคัญ: จุดชมวิว Moxing Ridge กระเช้าลอยฟ้า</p>
+<p>•พิกัด: ตอนเหนือเขต Yuexiu</p>
+<p>•การเดินทาง: MRT สาย 2 สถานี Baiyun Park</p>
+<p>•ติดต่อ: +86 20 3722 2222</p>
+<hr>
+
+<p><b>6. Sacred Heart Cathedral</b></p>
+<img src="images/gz6.jpg">
+<img src="images/gz6-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: โบสถ์โกธิกหินแกรนิตทั้งหลัง หนึ่งในไม่กี่แห่งของโลก</p>
+<p>•ไฮไลต์สำคัญ: กระจกสีจากฝรั่งเศส สถาปัตยกรรมโกธิก</p>
+<p>•พิกัด: ถนน Yide Road ริมแม่น้ำเพิร์ล</p>
+<p>•การเดินทาง: MRT สาย 6 สถานี Yide Lu</p>
+<p>•ติดต่อ: +86 20 8333 6761</p>
+<hr>
+
+<p><b>7. Chimelong Safari</b></p>
+<img src="images/gz7.jpg">
+<img src="images/gz7-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ซาฟารีขนาดใหญ่ระดับเอเชีย เน้นอนุรักษ์สัตว์หายาก</p>
+<p>•ไฮไลต์สำคัญ: แพนด้าแฝดสาม ซาฟารีขับรถชมสัตว์</p>
+<p>•พิกัด: เขต Panyu</p>
+<p>•การเดินทาง: MRT สาย 3/7 สถานี Hanxi Changlong</p>
+<p>•ติดต่อ: +86 20 8478 3333</p>
+<hr>
+
+<p><b>8. Yuexiu Park</b></p>
+<img src="images/gz8.jpg">
+<img src="images/gz8-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: สวนสาธารณะใหญ่ที่สุดในกวางโจว</p>
+<p>•ไฮไลต์สำคัญ: อนุสาวรีย์ห้าแพะ ป้อม Zhenhai Tower</p>
+<p>•พิกัด: เขต Yuexiu</p>
+<p>•การเดินทาง: MRT สาย 2 สถานี Yuexiu Park</p>
+<p>•ติดต่อ: +86 20 8666 1950</p>
+<hr>
+
+<p><b>9. Huacheng Square</b></p>
+<img src="images/gz9.jpg">
+<img src="images/gz9-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: จัตุรัสกลางเมืองสมัยใหม่ของกวางโจว</p>
+<p>•ไฮไลต์สำคัญ: Guangzhou Opera House และตึก CBD</p>
+<p>•พิกัด: Zhujiang New Town</p>
+<p>•การเดินทาง: MRT APM สถานี Huacheng Dadao</p>
+<p>•ติดต่อ: เปิด 24 ชั่วโมง</p>
+<hr>
+
+<p><b>10. Pearl River Night Cruise</b></p>
+<img src="images/gz10.jpg">
+<img src="images/gz10-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ล่องเรือชมวิวแม่น้ำเพิร์ลยามค่ำคืน</p>
+<p>•ไฮไลต์สำคัญ: วิว Canton Tower และสะพานประดับไฟ</p>
+<p>•พิกัด: ท่าเรือ Tianzi / Dashatou</p>
+<p>•การเดินทาง: MRT สาย 2 สถานี Haizhu Square</p>
+<p>•ติดต่อ: +86 20 8333 2222</p>
+
+</div>
+
+<!-- ===== โรงงาน กวางโจว ===== -->
+<div id="gz_factory" class="detail">
+
+<p><b>1. เขตอุตสาหกรรมเครื่องเสียงและระบบแสงสว่าง พานหยู (Panyu Audio & Lighting Hub)</b></p>
+<img src="images/gzf1.jpg">
+<img src="images/gzf1-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ศูนย์ผลิตเครื่องเสียงและไฟเวทีระดับโลก</p>
+<p>•เป้าหมายทางธุรกิจ: เครื่องเสียง Event, Home Theater</p>
+<p>•พิกัด: ย่าน Shibi และ Dashi เขต Panyu</p>
+<p>•การเดินทาง: MRT สาย 3 สถานี Dashi</p>
+<p>•จุดสังเกต: ใกล้สวนสนุก Chimelong</p>
+
+<p><b>2. เขตอุตสาหกรรมเครื่องสำอางและบิวตี้ ไป๋หยุน (Baiyun Cosmetics Industry Cluster)</b></p>
+<img src="images/gzf2.jpg">
+<img src="images/gzf2-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ศูนย์กลางอุตสาหกรรมความงามและ OEM ใหญ่ที่สุดในจีน</p>
+<p>•เป้าหมายทางธุรกิจ: สร้างแบรนด์เครื่องสำอาง บรรจุภัณฑ์</p>
+<p>•พิกัด: ย่าน Taihe และ Sanyuanli เขต Baiyun</p>
+<p>•การเดินทาง: MRT สาย 2 สถานี Sanyuanli</p>
+<p>•ติดต่อ: สมาคมอุตสาหกรรมเครื่องสำอางไป๋หยุน</p>
+<hr>
+
+<p><b>3. ศูนย์กลางเครื่องหนังและกระเป๋า สื่อหลิ่ง (Shiling Leather Hub)</b></p>
+<img src="images/gzf3.jpg">
+<img src="images/gzf3-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: เมืองหลวงแห่งกระเป๋าของโลก มีโรงงานกว่า 8,000 แห่ง</p>
+<p>•เป้าหมายทางธุรกิจ: กระเป๋าแฟชั่น OEM หนังแท้/หนังเทียม</p>
+<p>•พิกัด: ตำบล Shiling เขต Huadu</p>
+<p>•การเดินทาง: MRT สาย 9 สถานี Huadu Square แล้วต่อรถ</p>
+<p>•ติดต่อ: Shiling Leather City</p>
+<hr>
+
+<p><b>4. เขตเจิ้งเฉิง (Zengcheng Economic Zone)</b></p>
+<img src="images/gzf4.jpg">
+<img src="images/gzf4-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: นิคมอุตสาหกรรมเทคโนโลยีระดับชาติ</p>
+<p>•เป้าหมายทางธุรกิจ: ยานยนต์อัจฉริยะ ชิป และอิเล็กทรอนิกส์</p>
+<p>•พิกัด: เขต Zengcheng</p>
+<p>•การเดินทาง: MRT สาย 13 สถานี Xintang</p>
+<p>•ติดต่อ: +86 20 8270 3333</p>
+<hr>
+
+<p><b>5. จงต้า Textile (Zhongda Fabric Market)</b></p>
+<img src="images/gzf5.jpg">
+<img src="images/gzf5-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ตลาดผ้าและสิ่งทอใหญ่ที่สุดแห่งหนึ่งในเอเชีย</p>
+<p>•เป้าหมายทางธุรกิจ: ผ้าแฟชั่น อุปกรณ์ตัดเย็บ โรงงานเสื้อผ้า</p>
+<p>•พิกัด: ถนน Ruikang เขต Haizhu</p>
+<p>•การเดินทาง: MRT สาย 8 สถานี Sun Yat-sen University</p>
+<p>•ติดต่อ: Guangzhou International Textile City</p>
+<hr>
+
+<p><b>6. หงเหมี่ยว Auto Parts</b></p>
+<img src="images/gzf6.jpg">
+<img src="images/gzf6-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ศูนย์รวมอะไหล่รถยนต์และอุปกรณ์แต่งรถครบวงจร</p>
+<p>•เป้าหมายทางธุรกิจ: อะไหล่รถ Aftermarket และประดับยนต์</p>
+<p>•พิกัด: ถนน Yongfu และ Guangyuan</p>
+<p>•การเดินทาง: MRT สาย 5 สถานี Taojin</p>
+<p>•จุดสังเกต: Yongfu International Auto Accessories</p>
+<hr>
+
+<p><b>7. Tianhe Software Park</b></p>
+<img src="images/gzf7.jpg">
+<img src="images/gzf7-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ศูนย์กลางนวัตกรรมดิจิทัลและซอฟต์แวร์</p>
+<p>•เป้าหมายทางธุรกิจ: IT, Smart City, ระบบจัดการโรงงาน</p>
+<p>•พิกัด: เขต Tianhe</p>
+<p>•การเดินทาง: MRT สาย 21 สถานี Tianhe Smart City</p>
+<p>•ติดต่อ: +86 20 8552 2820</p>
+<hr>
+
+<p><b>8. Guangzhou Science City</b></p>
+<img src="images/gzf8.jpg">
+<img src="images/gzf8-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: นิคมไฮเทคด้านชีวภาพและระบบอัตโนมัติ</p>
+<p>•เป้าหมายทางธุรกิจ: หุ่นยนต์ เครื่องมือแพทย์ พลังงานสะอาด</p>
+<p>•พิกัด: เขต Huangpu</p>
+<p>•การเดินทาง: MRT สาย 6 สถานี Science City</p>
+<p>•ติดต่อ: Huangpu District Development and Reform Bureau</p>
+<hr>
+
+<p><b>9. Zhanxi Watch Industry</b></p>
+<img src="images/gzf9.jpg">
+<img src="images/gzf9-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: แหล่งผลิตนาฬิกาและเครื่องประดับขนาดใหญ่</p>
+<p>•เป้าหมายทางธุรกิจ: นาฬิกาแฟชั่น OEM เครื่องประดับสแตนเลส</p>
+<p>•พิกัด: ถนน Zhanxi เขต Liwan</p>
+<p>•การเดินทาง: MRT สาย 2/5 สถานี Guangzhou Railway Station</p>
+<p>•จุดสังเกต: Zhanxi Watch Market</p>
+<hr>
+
+<p><b>10. Nantian Hotel Equipment Center</b></p>
+<img src="images/gzf10.jpg">
+<img src="images/gzf10-2.jpg">
+<p>•อัตลักษณ์และความสำคัญ: ศูนย์รวมอุปกรณ์โรงแรมและเครื่องครัวอุตสาหกรรม</p>
+<p>•เป้าหมายทางธุรกิจ: เครื่องครัว โรงแรม ร้านอาหาร</p>
+<p>•พิกัด: ถนน Luoxi เขต Haizhu</p>
+<p>•การเดินทาง: MRT สาย 2 สถานี Luoxi</p>
+<p>•ติดต่อ: Nantian International Hotel Supplies Wholesale Market</p>
+
+</div>
+</div>
+
+<!-- ================= เซินเจิ้น ================= -->
+<div class="card">
+<img src="images/shenzhen.jpg">
+
+<div class="card-content">
+<h2>เซินเจิ้น</h2>
+
+<button onclick="toggle('sz_travel')">สถานที่ท่องเที่ยว</button>
+<button onclick="toggle('sz_factory')">แหล่งโรงงานอุตสาหกรรม</button>
+
+<!-- ===== ท่องเที่ยว เซินเจิ้น ===== -->
+<div id="sz_travel" class="detail">
+
+<p><b>1.Ping An Finance Center</b></p>
+<img src="images/sz1.jpg">
+<img src="images/sz1-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: ตึกสูงที่สุดในเซินเจิ้น สูง 599 เมตร</p>
+<p>• ไฮไลต์สำคัญ: จุดชมวิว Free Sky ชั้น 116 มองเห็นฮ่องกง</p>
+<p>• พิกัด: ย่าน Futian CBD</p>
+<p>• การเดินทาง: MRT สาย 1/3 สถานี Shopping Park</p>
+<p>• ติดต่อ: +86 755 2916 2888</p>
+<hr>
+
+<p><b>2.Splendid China Folk Village</b></p>
+<img src="images/sz2.jpg">
+<img src="images/sz2-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: สวนวัฒนธรรมรวมสถานที่สำคัญทั่วจีน</p>
+<p>• ไฮไลต์สำคัญ: กำแพงเมืองจีนจำลอง และโชว์วัฒนธรรม</p>
+<p>• พิกัด: เขต Nanshan</p>
+<p>• การเดินทาง: MRT สาย 1 สถานี OCT</p>
+<p>• ติดต่อ: +86 755 2660 0626</p>
+<hr>
+
+<p><b>3.Window of the World</b></p>
+<img src="images/sz3.jpg">
+<img src="images/sz3-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: ธีมพาร์ครวมสิ่งมหัศจรรย์โลกกว่า 130 แห่ง</p>
+<p>• ไฮไลต์สำคัญ: หอไอเฟลจำลอง พีระมิดอียิปต์</p>
+<p>• พิกัด: เขต Nanshan</p>
+<p>• การเดินทาง: MRT สาย 1/2 สถานี Window of the World</p>
+<p>• ติดต่อ: +86 755 2660 8000</p>
+<hr>
+
+<p><b>4.Dongmen Pedestrian Street</b></p>
+<img src="images/sz4.jpg">
+<img src="images/sz4-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: ถนนคนเดินเก่าแก่และย่านแฟชั่นใหญ่ของเซินเจิ้น</p>
+<p>• ไฮไลต์สำคัญ: สตรีทฟู้ด เสื้อผ้า และอุปกรณ์อิเล็กทรอนิกส์</p>
+<p>• พิกัด: เขต Luohu</p>
+<p>• การเดินทาง: MRT สาย 1/3 สถานี Laojie</p>
+<p>• ติดต่อ: สำนักงานบริหารย่านตงเหมิน</p>
+<hr>
+
+<p><b>5.MOCAPE</b></p>
+<img src="images/sz5.jpg">
+<img src="images/sz5-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: พิพิธภัณฑ์ศิลปะและผังเมืองสุดล้ำ</p>
+<p>• ไฮไลต์สำคัญ: โครงสร้าง Cloud และนิทรรศการมัลติมีเดีย</p>
+<p>• พิกัด: เขต Futian</p>
+<p>• การเดินทาง: MRT สาย 3/4 สถานี Children's Palace</p>
+<p>• ติดต่อ: +86 755 8276 0159</p>
+<hr>
+
+<p><b>6.Shenzhen Bay Park</b></p>
+<img src="images/sz6.jpg">
+<img src="images/sz6-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: สวนริมทะเลยาวกว่า 13 กม.</p>
+<p>• ไฮไลต์สำคัญ: ทางปั่นจักรยาน วิวอ่าวเซินเจิ้น</p>
+<p>• พิกัด: เขต Nanshan</p>
+<p>• การเดินทาง: MRT สาย 9 สถานี Shenzhen Bay Park</p>
+<p>• ติดต่อ: สำนักงานสวนสาธารณะเซินเจิ้น</p>
+<hr>
+
+<p><b>7.Sea World Shekou</b></p>
+<img src="images/sz7.jpg">
+<img src="images/sz7-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: ย่านร้านอาหารและความบันเทิงนานาชาติ</p>
+<p>• ไฮไลต์สำคัญ: เรือ Minghua และโชว์น้ำพุดนตรี</p>
+<p>• พิกัด: ย่าน Shekou เขต Nanshan</p>
+<p>• การเดินทาง: MRT สาย 2/12 สถานี Sea World</p>
+<p>• ติดต่อ: +86 755 2689 0000</p>
+<hr>
+
+<p><b>8.Huaqiangbei</b></p>
+<img src="images/sz8.jpg">
+<img src="images/sz8-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: ตลาดอิเล็กทรอนิกส์ใหญ่ที่สุดในโลก</p>
+<p>• ไฮไลต์สำคัญ: ตึก SEG Electronics และอุปกรณ์เทคโนโลยี</p>
+<p>• พิกัด: เขต Futian</p>
+<p>• การเดินทาง: MRT สาย 2/7 สถานี Huaqiang North</p>
+<p>• ติดต่อ: ศูนย์ข้อมูลธุรกิจหัวเฉียงเป่ย</p>
+<hr>
+
+<p><b>9.Xianhu Botanical Garden</b></p>
+<img src="images/sz9.jpg">
+<img src="images/sz9-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: สวนพฤกษศาสตร์และวัดพุทธกลางหุบเขา</p>
+<p>• ไฮไลต์สำคัญ: วัด Hongfa Temple และพิพิธภัณฑ์พรรณไม้</p>
+<p>• พิกัด: เขต Luohu</p>
+<p>• การเดินทาง: MRT สาย 2/8 สถานี Xianhu Road</p>
+<p>• ติดต่อ: +86 755 2573 1234</p>
+<hr>
+
+<p><b>10.Shenzhen Museum</b></p>
+<img src="images/sz10.jpg">
+<img src="images/sz10-2.jpg">
+<p>• อัตลักษณ์และความสำคัญ: พิพิธภัณฑ์ประวัติศาสตร์และการพัฒนาเซินเจิ้น</p>
+<p>• ไฮไลต์สำคัญ: นิทรรศการ Reform and Opening-up</p>
+<p>• พิกัด: Citizen Center เขต Futian</p>
+<p>• การเดินทาง: MRT สาย 2/4 สถานี Civic Center</p>
+<p>• ติดต่อ: +86 755 8812 5555</p>
+
+</div>
+
+<!-- ===== โรงงาน เซินเจิ้น ===== -->
+<div id="sz_factory" class="detail">
+
+<p><b>1. สวนอุตสาหกรรมไฮเทคเซินเจิ้น (Shenzhen High-Tech Industrial Park - SHIP)</b></p>
+<img src="images/szf1.jpg">
+<img src="images/szf1-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: เป็นเขตนิคมอุตสาหกรรมระดับชาติที่เน้น "Intelligence & Innovation" โดยเป็นฐานการผลิตชิ้นส่วนอิเล็กทรอนิกส์ต้นน้ำ (Upstream) เช่น แผ่นเวเฟอร์, เซมิคอนดักเตอร์ และระบบโทรคมนาคมไร้สาย 5G/6G</p>
+<p>• ศักยภาพเชิงธุรกิจ: เหมาะสำหรับบริษัทที่ต้องการหาพาร์ทเนอร์ด้าน R&D และการผลิตสินค้าเทคโนโลยีที่มีมูลค่าเพิ่มสูง (High Value-Added)</p>
+<p>• พิกัดการเดินทาง: รถไฟใต้ดินสาย 1 สถานี Hi-Tech Park (高新园)</p>
+<p>• เบอร์โทรศัพท์: +86 755 2663 2008 / +86 755 2663 9345</p>
+<p>• สถานที่ใกล้เคียง: มหาวิทยาลัยเซินเจิ้น (Shenzhen University)</p>
+<hr>
+
+<p><b>2. เขตอุตสาหกรรมฮาร์ดแวร์อัจฉริยะหัวเฉียงเป่ย (Huaqiangbei Hardware Hub)</b></p>
+<img src="images/szf2.jpg">
+<img src="images/szf2-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: เป็นระบบนิเวศการผลิตที่ใหญ่ที่สุดในโลกสำหรับฮาร์ดแวร์ ครอบคลุมตั้งแต่ชิป PCB โดรน และอุปกรณ์สวมใส่อัจฉริยะ</p>
+<p>• ศักยภาพเชิงธุรกิจ: เหมาะสำหรับ Reverse Engineering และจัดซื้อชิ้นส่วนราคาส่ง</p>
+<p>• พิกัด: Huaqiang North (华强北)</p>
+<p>• เบอร์โทรศัพท์: +86 755 8336 2309 / +86 755 8320 0053</p>
+<p>• สถานที่ใกล้เคียง: ตึก SEG Plaza</p>
+<hr>
+
+<p><b>3. นิคมอุตสาหกรรมปั้นเถียน (Bantian High-Tech Zone)</b></p>
+<img src="images/szf3.jpg">
+<img src="images/szf3-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: เน้น Network Infrastructure, Cloud Computing และ Embedded Systems</p>
+<p>• ศักยภาพเชิงธุรกิจ: ศูนย์ซัพพลายเชนของบริษัทเทคโนโลยีขนาดใหญ่</p>
+<p>• พิกัด: สถานี Huawei (华为)</p>
+<p>• เบอร์โทรศัพท์: +86 755 2894 8100 / +86 755 8935 3010</p>
+<p>• สถานที่ใกล้เคียง: Huawei Base</p>
+<hr>
+
+<p><b>4. เขตอุตสาหกรรมยานยนต์ไฟฟ้าผิงซาน (Pingshan NEV Industrial Base)</b></p>
+<img src="images/szf4.jpg">
+<img src="images/szf4-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: ฐานการผลิต EV และแบตเตอรี่ลิเธียม</p>
+<p>• ศักยภาพเชิงธุรกิจ: เหมาะกับอุตสาหกรรมยานยนต์ไฟฟ้าและพลังงานสะอาด</p>
+<p>• พิกัด: Pingshan Center (坪山中心)</p>
+<p>• เบอร์โทรศัพท์: +86 755 8936 8999 / +86 755 2833 9207</p>
+<p>• สถานที่ใกล้เคียง: BYD Factory</p>
+<hr>
+
+<p><b>5. นิคมเครื่องจักรเป่าอัน (Bao'an Precision Manufacturing)</b></p>
+<img src="images/szf5.jpg">
+<img src="images/szf5-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: OEM เครื่องจักร แม่พิมพ์ และงานฉีดพลาสติก</p>
+<p>• ศักยภาพเชิงธุรกิจ: การผลิตต้นทุนต่ำสำหรับอุตสาหกรรมไฟฟ้าและยานยนต์</p>
+<p>• พิกัด: Bao'an / Airport East</p>
+<p>• เบอร์โทรศัพท์: +86 755 2775 5888 / +86 755 2999 6888</p>
+<p>• สถานที่ใกล้เคียง: สนามบินเซินเจิ้น</p>
+<hr>
+
+<p><b>6. เมืองอุตสาหกรรมกวงหมิง (Guangming Laser & Display City)</b></p>
+<img src="images/szf6.jpg">
+<img src="images/szf6-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: LCD, OLED และเทคโนโลยีเลเซอร์อุตสาหกรรม</p>
+<p>• ศักยภาพเชิงธุรกิจ: Digital Signage และเครื่องจักรเลเซอร์</p>
+<p>• พิกัด: Guangming (光明)</p>
+<p>• เบอร์โทรศัพท์: +86 755 8821 1133 / +86 755 2341 6251</p>
+<p>• สถานที่ใกล้เคียง: ศูนย์วิจัยเทคโนโลยี</p>
+<hr>
+
+<p><b>7. เขตฝูเถียนโลจิสติกส์ (Futian Free Trade Zone)</b></p>
+<img src="images/szf7.jpg">
+<img src="images/szf7-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: เขตปลอดภาษีสำหรับการส่งออกสินค้า</p>
+<p>• ศักยภาพเชิงธุรกิจ: Hub กระจายสินค้าไปทั่วโลก</p>
+<p>• พิกัด: Futian Bonded Area (福保)</p>
+<p>• เบอร์โทรศัพท์: +86 755 8359 0138 / +86 755 8359 6414</p>
+<p>• สถานที่ใกล้เคียง: ด่านฮ่องกง</p>
+<hr>
+
+<p><b>8. ศูนย์จิวเวลรี่สุ่ยเป่ย (Shuibei Jewelry Center)</b></p>
+<img src="images/szf8.jpg">
+<img src="images/szf8-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: AI Design และระบบผลิตเครื่องประดับอัตโนมัติ</p>
+<p>• ศักยภาพเชิงธุรกิจ: ซัพพลายเออร์จิวเวลรี่ระดับโลก</p>
+<p>• พิกัด: Tianbei (田贝)</p>
+<p>• เบอร์โทรศัพท์: +86 755 2561 2838 / +86 755 2550 9830</p>
+<p>• สถานที่ใกล้เคียง: Jewelry Exhibition Center</p>
+<hr>
+
+<p><b>9. นิคมหุ่นยนต์เฉอวโข่ว (Shekou Robotics Zone)</b></p>
+<img src="images/szf9.jpg">
+<img src="images/szf9-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: Service Robots, Drone และ Smart Shipping</p>
+<p>• ศักยภาพเชิงธุรกิจ: Automation สำหรับโรงงาน</p>
+<p>• พิกัด: Sea World (海上世界)</p>
+<p>• เบอร์โทรศัพท์: +86 755 2689 0000 / +86 755 2688 7000</p>
+<p>• สถานที่ใกล้เคียง: Cruise Center</p>
+<hr>
+
+<p><b>10. นิคมชีวภาพต้าเผิง (Dapeng Life Science Park)</b></p>
+<img src="images/szf10.jpg">
+<img src="images/szf10-2.jpg">
+<p>• วิสัยทัศน์และการผลิต: Biotech / Gene / Medical Research</p>
+<p>• ศักยภาพเชิงธุรกิจ: อุปกรณ์การแพทย์และชีวภาพ</p>
+<p>• พิกัด: Dapeng Peninsula</p>
+<p>• เบอร์โทรศัพท์: +86 755 2833 3000 / +86 755 2833 3019</p>
+<p>• สถานที่ใกล้เคียง: China GeneBank</p>
+
+</div>
+
+</div>
+</div>
+
+<script>
+function toggle(id){
+let x=document.getElementById(id);
+x.style.display = (x.style.display==="block") ? "none":"block";
+}
+</script>
+
+</body>
+</html>
